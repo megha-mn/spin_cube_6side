@@ -1,0 +1,139 @@
+.wrap {
+  width: 300px;
+  height: auto;
+  perspective: 800px;
+  position: fixed;
+  right: 50%;
+  bottom: 50%;
+}
+
+.cube {
+  position: absolute;
+  width: 300px;
+  transform-style: preserve-3d;
+}
+
+.cube .front, .cube .back, .cube .left, .cube .right {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  text-align: center;
+  border: 1px solid #ece8e8;
+}
+
+.title-wrapper{
+  background-color: #ba2f31;
+  color: #fff;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.title-wrapper .title-right,
+.title-wrapper .title-left{
+  font-size: 22px;
+}
+
+.title-left{
+  text-align: start;
+  padding: 10px;
+}
+
+.title-right{
+  text-align: end;
+  padding: 10px;
+}
+
+.table-wrapper {
+  width: 100%;
+}
+
+.party-name-wrapper{
+  display: flex;
+  color: #717171;
+}
+
+.leads-result{
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.back,
+.front,
+.right,
+.left {
+  background-color: #f5f5f5;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.front .table-wrapper tr:hover,
+.back .table-wrapper tr:hover,
+.left .table-wrapper tr:hover,
+.right .table-wrapper tr:hover {
+  border: none !important;
+  cursor: pointer;
+}
+
+.t-head{
+  background: #333333;
+}
+
+.t-head th{
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+.fill-color{
+  height: 15px !important;
+  width: 15px !important;
+  background: red;
+  margin-right: 5px;
+}
+
+.table-wrapper td .inside-div{
+  height: 50px;
+  background: #fff;
+  margin-left: 2px;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-wrapper tr td{
+  width: 33.33%
+}
+
+
+/* Cube */
+.back {
+  transform: rotateY(180deg) translateZ(150px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(150px);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.cube {
+  animation: spin 50s infinite linear;
+}
